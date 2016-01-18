@@ -7,3 +7,6 @@
 [submodule "provisioning/modules/concat"]
 	path = provisioning/modules/concat
 	url = https://github.com/puppetlabs/puppetlabs-concat.git
+[submodule "provisioning/modules/python"]
+	path = provisioning/modules/python
+	url = https://github.com/stankevich/puppet-python.git

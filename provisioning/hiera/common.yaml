@@ -1,0 +1,23 @@
+---
+# additional-packages module
+additional_packages::packages:
+  - openjdk-7-jre-headless
+  - zip
+  - make
+  - screen
+  - mysql-client
+  - mysql-server
+  - python-pip
+  - python-mysqldb
+
+python_packages::packages:
+  - Django==1.9
+
+apache-packages::packages:
+  - apache2
+  - libapache2-mod-auth-mysql
+  - libapache2-mod-wsgi
+
+application::rootdir: "/data/applications"
+application::webroot: "lh"
+application::logdir: "logs"

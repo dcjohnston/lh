@@ -1,0 +1,3 @@
+[submodule "provisioning/puppet/modules/mysql"]
+	path = provisioning/puppet/modules/mysql
+	url = git@github.com:puppetlabs/puppetlabs-mysql.git

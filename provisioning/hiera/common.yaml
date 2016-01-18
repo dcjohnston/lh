@@ -5,8 +5,6 @@ additional_packages::packages:
   - zip
   - make
   - screen
-  - mysql-client
-  - mysql-server
   - python-pip
   - python-mysqldb
 

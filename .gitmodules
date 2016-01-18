@@ -1,3 +1,9 @@
 [submodule "provisioning/puppet/modules/mysql"]
 	path = provisioning/puppet/modules/mysql
 	url = git@github.com:puppetlabs/puppetlabs-mysql.git
+[submodule "provisioning/modules/apache"]
+	path = provisioning/modules/apache
+	url = git@github.com:puppetlabs/puppetlabs-apache.git
+[submodule "provisioning/modules/concat"]
+	path = provisioning/modules/concat
+	url = https://github.com/puppetlabs/puppetlabs-concat.git

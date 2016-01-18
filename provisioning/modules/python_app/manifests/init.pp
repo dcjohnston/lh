@@ -1,7 +1,6 @@
 class python_app{
   anchor { 'python_app::begin': } ->
   class { 'python':
-    version    => '2.7.6',
     pip        => 'present',
     dev        => 'absent',
     virtualenv => 'present',
@@ -10,7 +9,7 @@ class python_app{
   python::virtualenv { 'listherd_env' :
     ensure => 'present',
     version => 'system',
-    venv_dir => '/vagrant/virtual_envs',
+    venv_dir => '/vagrant/listherd_env',
     requirements => '/data/applications/lh/requirements.txt',
     owner => 'vagrant',
     group => 'vagrant',
@@ -19,7 +18,7 @@ class python_app{
   python::pip { 'django':
     pkgname => 'django',
     ensure => '1.9',
-    virtualenv => 'listherd_env',
+    virtualenv => '/vagrant/listherd_env/',
   } ->
   anchor { 'python_app:end': }
 }

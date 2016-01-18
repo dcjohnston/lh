@@ -5,11 +5,7 @@ additional_packages::packages:
   - zip
   - make
   - screen
-  - python-pip
   - python-mysqldb
-
-python_packages::packages:
-  - Django==1.9
 
 application::rootdir: "/data/applications"
 application::webroot: "lh"

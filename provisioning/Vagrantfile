@@ -16,20 +16,20 @@ Vagrant.configure(2) do |config|
     # download the vbox from the Epidemico installer service if it doesn't exist locally
     config.vm.box_download_insecure = true
     config.vm.network :forwarded_port, guest: 443, host: 4443
-    config.vm.network :forwarded_port, guest: 8000, host: 8000
+    config.vm.network :forwarded_port, guest: 80, host: 8000
     config.vm.synced_folder git_root + "lh", "/data/applications/lh", create: true
     vb.memory = 4096
     #vb.gui = true # will pop up the virtualbox console window
   end
 
   # install puppet
-  config.vm.provision "shell", :inline => <<-shell
+  config.vm.provision "shell", :inline => <<-SHELL
     # install puppet
     wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb &> /dev/null
     dpkg -i puppetlabs-release-trusty.deb &> /dev/nul
     apt-get update
     apt-get install puppet -y
-  shell
+  SHELL
 
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "modules"

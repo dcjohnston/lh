@@ -1,1 +1,2 @@
 # Puppet will install and/or update pip packages listed here
+django==1.9

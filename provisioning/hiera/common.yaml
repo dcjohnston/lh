@@ -5,7 +5,7 @@ additional_packages::packages:
   - zip
   - make
   - screen
-  - python-mysqldb
+  - libmysqlclient-dev
 
 application::rootdir: "/data/applications"
 application::webroot: "lh"

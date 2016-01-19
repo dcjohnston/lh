@@ -2,7 +2,7 @@ class python_app{
   anchor { 'python_app::begin': } ->
   class { 'python':
     pip        => 'present',
-    dev        => 'absent',
+    dev        => 'present',
     virtualenv => 'present',
     gunicorn   => 'absent',
   } ->
@@ -20,5 +20,8 @@ class python_app{
     ensure => '1.9',
     virtualenv => '/vagrant/listherd_env',
   } ->
+  python::pip { 'mysql_driver':
+    pkgname => 'MySQL-python',
+  }
   anchor { 'python_app:end': }
 }

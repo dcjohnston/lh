@@ -5,7 +5,7 @@ class mysql_app {
     remove_default_accounts => true,
   } ->
   mysql::db { 'mysql_app':
-    user => 'listherd_db',
+    user => 'listherd',
     password => 'insecure_local',
     host => 'localhost',
     grant => 'ALL'

@@ -1,3 +1,5 @@
 **/listherd_env/**
 **/.vagrant/**
 **.pyc
+**/static/**
+/provisioning/modules/mysql

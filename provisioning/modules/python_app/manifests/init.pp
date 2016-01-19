@@ -18,7 +18,7 @@ class python_app{
   python::pip { 'django':
     pkgname => 'django',
     ensure => '1.9',
-    virtualenv => '/vagrant/listherd_env/',
+    virtualenv => '/vagrant/listherd_env',
   } ->
   anchor { 'python_app:end': }
 }
